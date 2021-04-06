@@ -1,0 +1,189 @@
+#N canvas 0 25 1440 847 12;
+#X obj 679 579 *~;
+#X text 43 704 Lists of frequencies to be added to the Center Frequency
+fields. Each list creates a specific sound spectrum \, but;
+#X text 42 736 they all share the same internal proportions \, derived
+from;
+#X text 41 752 those of the planetary masses of the solar system.;
+#X text 45 787 Jupiter: 90 \, 282 \, 867 \, 926 \, 1699 \, 1745 \,
+2241 \, 2590;
+#X text 44 801 Saturn: 175 \, 405 \, 1105 \, 1175 \, 2100 \, 2156 \,
+2749 \, 3166;
+#X text 45 816 Neptune: 296 \, 556 \, 1348 \, 1428 \, 2474 \, 2537
+\, 3208 \, 3680;
+#X text 45 831 Uranus: 307 \, 574 \, 1388 \, 1470 \, 2545 \, 2610 \,
+3299 \, 3784;
+#X text 45 846 Earth: 496 \, 810 \, 1767 \, 1864 \, 3128 \, 3204 \,
+4015 \, 4585;
+#X text 44 861 Venus: 510 \, 830 \, 1803 \, 1901 \, 3188 \, 3265 \,
+4090 \, 4670;
+#X text 45 874 Mars: 653 \, 1026 \, 2163 \, 2278 \, 3778 \, 3870 \,
+4834 \, 5511;
+#X text 44 888 Mercury: 700 \, 1084 \, 2255 \, 2372 \, 3918 \, 4011
+\, 5003 \, 5700;
+#X text 494 836 Jupiter 90 \, Saturn 175 \, Neptune 148 \, Uranus 153
+\, Earth 248 \, Venus 255 \, Mars 326 \, Mercury 350;
+#X floatatom 292 277 5 0 0 0 - - -;
+#N canvas 0 50 450 355 triangle 0;
+#X obj 143 24 inlet;
+#X obj 181 315 outlet~;
+#X obj 143 125 phasor~;
+#X obj 143 177 -~ 1;
+#X obj 143 203 clip~ 0 1;
+#X obj 143 151 *~ 2;
+#X obj 235 125 phasor~;
+#X obj 235 177 -~ 1;
+#X obj 235 203 clip~ 0 1;
+#X obj 235 151 *~ 2;
+#X obj 177 74 * -1;
+#X obj 182 276 +~;
+#X msg 281 80 2;
+#X connect 0 0 2 0;
+#X connect 0 0 10 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 11 0;
+#X connect 5 0 3 0;
+#X connect 6 0 9 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 1;
+#X connect 9 0 7 0;
+#X connect 10 0 6 0;
+#X connect 11 0 1 0;
+#X connect 12 0 6 1;
+#X connect 12 0 2 1;
+#X restore 292 305 pd triangle;
+#X floatatom 201 278 5 0 0 0 - - -;
+#N canvas 0 50 450 355 triangle 0;
+#X obj 143 24 inlet;
+#X obj 183 318 outlet~;
+#X obj 143 125 phasor~;
+#X obj 143 177 -~ 1;
+#X obj 143 203 clip~ 0 1;
+#X obj 143 151 *~ 2;
+#X obj 235 125 phasor~;
+#X obj 235 177 -~ 1;
+#X obj 235 203 clip~ 0 1;
+#X obj 235 151 *~ 2;
+#X obj 177 74 * -1;
+#X obj 182 276 +~;
+#X msg 281 80 2;
+#X connect 0 0 2 0;
+#X connect 0 0 10 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 11 0;
+#X connect 5 0 3 0;
+#X connect 6 0 9 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 1;
+#X connect 9 0 7 0;
+#X connect 10 0 6 0;
+#X connect 11 0 1 0;
+#X connect 12 0 6 1;
+#X connect 12 0 2 1;
+#X restore 201 305 pd triangle;
+#X obj 1202 527 rampOnOff;
+#X text 190 180 New low frequencies;
+#X obj 384 304 cos~;
+#X obj 480 304 cos~;
+#X obj 385 336 *~ 0.1;
+#X obj 481 336 *~ 0.1;
+#X obj 573 305 cos~;
+#X obj 679 305 cos~;
+#X obj 574 337 *~ 0.1;
+#X obj 680 337 *~ 0.1;
+#X obj 779 305 cos~;
+#X obj 882 305 cos~;
+#X obj 780 337 *~ 0.1;
+#X obj 883 337 *~ 0.1;
+#X obj 985 305 cos~;
+#X obj 1090 305 cos~;
+#X obj 1091 337 *~ 0.05;
+#X obj 986 337 *~ 0.08;
+#X obj 292 337 *~ 0.6;
+#X obj 201 337 *~ 0.6;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array visual_representation 100 float 3;
+#A 0 -0.00166935 -0.00576271 -0.0093761 -0.010991 -0.010862 -0.00857945
+-0.00483733 -0.00039877 0.00314706 0.00507015 0.00562901 0.00486695
+0.00331734 0.00188185 0.001505 0.00259727 0.00425878 0.0058327 0.00669548
+0.00621 0.0038582 9.15284e-05 -0.00387615 -0.00716964 -0.00897737 -0.00922431
+-0.00782716 -0.00557987 -0.00344213 -0.0018415 -0.00196503 -0.0034012
+-0.00537183 -0.00682805 -0.0075061 -0.00706939 -0.00544227 -0.0025507
+0.0012229 0.00485404 0.00710366 0.00793353 0.00755975 0.00683142 0.00615368
+0.00571699 0.00549679 0.00534374 0.00516022 0.00450216 0.00271815 -0.000105634
+-0.00343355 -0.00653277 -0.00868307 -0.00948686 -0.00899629 -0.00712205
+-0.0045638 -0.00237318 -0.000665239 0.000342626 0.000202813 -0.000421942
+-0.00124436 -0.00170261 -0.000924312 0.000716677 0.00294604 0.00545887
+0.00791938 0.0097535 0.0103818 0.00955796 0.00695312 0.00332566 2.53481e-06
+-0.00275535 -0.00417693 -0.00467065 -0.00504054 -0.0055304 -0.00620004
+-0.00691632 -0.0082295 -0.00916938 -0.00946818 -0.00853574 -0.00651176
+-0.00325204 0.00055423 0.00398025 0.00607502 0.00686228 0.00633658
+0.00472436 0.00259406 0.00115561 0.000457933 0.000794585;
+#X coords 0 1 100 -1 200 140 1 0 0;
+#X restore 1286 119 graph;
+#X obj 1392 602 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1392 622 metro 100;
+#X text 1397 717 Line out to soundcard;
+#X obj 1392 674 tabwrite~ visual_representation;
+#X obj 80 39 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 80 59 \; pd dsp \$1;
+#X obj 1202 494 r UranusOnOff;
+#X text 52 557 40 \, 45 \, 46 \, 87.5 \, 88.5 \, 148 \, 149 \, 153
+\, 154 \, 248 \, 249 \, 255 \, 256 \, 326 \, 327 \, 350 \, 351;
+#X msg 201 248 153.5;
+#X msg 292 248 154.5;
+#X obj 383 265 phasor~ 307;
+#X obj 480 266 phasor~ 574;
+#X obj 573 265 phasor~ 1388;
+#X obj 679 265 phasor~ 1470;
+#X obj 780 262 phasor~ 2545;
+#X obj 881 263 phasor~ 2610;
+#X obj 985 262 phasor~ 3299;
+#X obj 1090 262 phasor~ 3784;
+#X obj 666 711 outlet~;
+#X obj 202 218 loadbang;
+#X connect 0 0 41 0;
+#X connect 0 0 56 0;
+#X connect 13 0 14 0;
+#X connect 14 0 35 0;
+#X connect 15 0 16 0;
+#X connect 16 0 36 0;
+#X connect 17 0 0 1;
+#X connect 19 0 21 0;
+#X connect 20 0 22 0;
+#X connect 21 0 0 0;
+#X connect 22 0 0 0;
+#X connect 23 0 25 0;
+#X connect 24 0 26 0;
+#X connect 25 0 0 0;
+#X connect 26 0 0 0;
+#X connect 27 0 29 0;
+#X connect 28 0 30 0;
+#X connect 29 0 0 0;
+#X connect 30 0 0 0;
+#X connect 31 0 34 0;
+#X connect 32 0 33 0;
+#X connect 33 0 0 0;
+#X connect 34 0 0 0;
+#X connect 35 0 0 0;
+#X connect 36 0 0 0;
+#X connect 38 0 39 0;
+#X connect 39 0 41 0;
+#X connect 42 0 43 0;
+#X connect 44 0 17 0;
+#X connect 46 0 15 0;
+#X connect 47 0 13 0;
+#X connect 48 0 19 0;
+#X connect 49 0 20 0;
+#X connect 50 0 23 0;
+#X connect 51 0 24 0;
+#X connect 52 0 27 0;
+#X connect 53 0 28 0;
+#X connect 54 0 31 0;
+#X connect 55 0 32 0;
+#X connect 57 0 46 0;
+#X connect 57 0 47 0;

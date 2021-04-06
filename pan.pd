@@ -1,0 +1,33 @@
+#N canvas 2062 429 915 488 12;
+#X obj 238 259 cos~;
+#X obj 311 259 cos~;
+#X obj 332 201 hsl 100 15 0 0.25 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 224 293 *~;
+#X obj 297 290 *~;
+#X msg 359 180 0.125;
+#X text 453 201 <-- Range: 0-.25;
+#X text 401 180 center;
+#X text 42 15 via https://forum.pdpatchrepo.info/topic/2434/equal-power-panning
+;
+#X text 44 65 Equal power panning using curves from [cos~;
+#X obj 224 313 outlet~;
+#X obj 297 311 outlet~;
+#X obj 224 129 inlet~;
+#X text 359 128 assumes values from -1 : 1;
+#X obj 308 151 +~ 1;
+#X obj 308 172 /~ 8;
+#X obj 311 235 +~ 0.75;
+#X obj 308 130 inlet~;
+#X connect 0 0 3 1;
+#X connect 1 0 4 1;
+#X connect 3 0 10 0;
+#X connect 4 0 11 0;
+#X connect 5 0 2 0;
+#X connect 12 0 3 0;
+#X connect 12 0 4 0;
+#X connect 14 0 15 0;
+#X connect 15 0 0 0;
+#X connect 15 0 16 0;
+#X connect 16 0 1 0;
+#X connect 17 0 14 0;
