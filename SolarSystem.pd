@@ -3,9 +3,9 @@
 #X obj 52 620 Sun;
 #X obj 270 722 pan;
 #X obj 351 614 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6614 1;
+-1 -1 6404 1;
 #X obj 292 474 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1378 1;
+-1 -1 7861 1;
 #X msg 617 87 1;
 #X obj 617 109 atan;
 #X obj 617 134 * 4;
@@ -16,7 +16,7 @@
 #X obj 233 691 *~;
 #X obj 282 556 calcVolPan;
 #X obj 283 613 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2725 1;
+-1 -1 0 1;
 #X obj 282 453 r mAngle;
 #X obj 54 923 dac~;
 #X floatatom 91 652 5 0 0 0 - - -;
@@ -53,14 +53,14 @@
 #X text 344 307 unit vector;
 #X obj 533 727 pan;
 #X obj 621 616 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5317 1;
+-1 -1 6281 1;
 #X obj 555 479 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4420 1;
+-1 -1 4688 1;
 #X obj 533 757 dac~;
 #X obj 496 696 *~;
 #X obj 545 561 calcVolPan;
 #X obj 549 613 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3610 1;
+-1 -1 0 1;
 #X obj 578 499 loadbang;
 #X floatatom 578 541 5 0 0 0 - - -;
 #X obj 495 434 Venus;
@@ -71,14 +71,14 @@
 #X obj 545 458 r vAngle;
 #X obj 805 732 pan;
 #X obj 891 626 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6610 1;
+-1 -1 6242 1;
 #X obj 827 484 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1646 1;
+-1 -1 3918 1;
 #X obj 805 762 dac~;
 #X obj 768 701 *~;
 #X obj 817 566 calcVolPan;
 #X obj 823 622 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2139 1;
+-1 -1 0 1;
 #X obj 850 504 loadbang;
 #X floatatom 850 546 5 0 0 0 - - -;
 #X floatatom 896 566 5 0 0 0 - - -;
@@ -89,32 +89,32 @@
 #X obj 237 100 s hearingRange;
 #X floatatom 236 78 5 0 0 0 - - -;
 #X obj 239 125 hsl 100 15 0.1 50 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2200 1;
+-1 -1 0 1;
 #X obj 236 145 s orbitSpeed;
 #X floatatom 328 145 5 0 0 0 - - -;
 #X obj 1096 741 pan;
 #X obj 1183 629 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5824 1;
+-1 -1 6247 1;
 #X obj 1118 493 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2488 1;
+-1 -1 2893 1;
 #X obj 1096 771 dac~;
 #X obj 1059 710 *~;
 #X obj 1108 575 calcVolPan;
 #X obj 1108 629 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1888 1;
+-1 -1 0 1;
 #X obj 1141 513 loadbang;
 #X floatatom 1188 573 5 0 0 0 - - -;
 #X floatatom 1141 555 5 0 0 0 - - -;
 #X obj 309 1116 pan;
 #X obj 393 1003 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3750 1;
+-1 -1 5943 1;
 #X obj 331 868 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3325 1;
+-1 -1 3386 1;
 #X obj 309 1146 dac~;
 #X obj 272 1085 *~;
 #X obj 321 950 calcVolPan;
 #X obj 335 1000 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 870 1;
+-1 -1 0 1;
 #X obj 354 888 loadbang;
 #X floatatom 354 930 5 0 0 0 - - -;
 #X obj 1188 543 r hearingRange;
@@ -122,14 +122,14 @@
 #X obj 400 920 r hearingRange;
 #X obj 568 1134 pan;
 #X obj 655 1021 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2248 1;
+-1 -1 7145 1;
 #X obj 590 886 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5042 1;
+-1 -1 416 1;
 #X obj 568 1164 dac~;
 #X obj 531 1103 *~;
 #X obj 580 968 calcVolPan;
 #X obj 603 1023 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 869 1;
+-1 -1 0 1;
 #X obj 613 906 loadbang;
 #X floatatom 613 948 5 0 0 0 - - -;
 #X floatatom 659 968 5 0 0 0 - - -;
@@ -141,7 +141,7 @@
 #X msg 1141 534 26;
 #X obj 874 1131 pan;
 #X obj 896 883 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 947 1;
+-1 -1 1093 1;
 #X obj 874 1161 dac~;
 #X obj 837 1100 *~;
 #X obj 886 965 calcVolPan;
@@ -150,7 +150,7 @@
 #X floatatom 919 945 5 0 0 0 - - -;
 #X obj 1137 1136 pan;
 #X obj 1159 888 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4292 1;
+-1 -1 122 1;
 #X obj 1137 1166 dac~;
 #X obj 1100 1105 *~;
 #X obj 1149 970 calcVolPan;
@@ -161,7 +161,7 @@
 #X obj 1228 940 r hearingRange;
 #X obj 1409 1141 pan;
 #X obj 1431 893 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6167 1;
+-1 -1 5797 1;
 #X obj 1409 1171 dac~;
 #X obj 1372 1110 *~;
 #X obj 1421 975 calcVolPan;
@@ -185,13 +185,13 @@
 #X obj 540 297 s MercuryOnOff;
 #X obj 658 276 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 762 276 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 762 276 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 867 274 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 867 274 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 585 330 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 585 330 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 701 330 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 701 330 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 810 330 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -411,7 +411,7 @@
 #X text 448 165 Uranus__312;
 #X text 448 199 Pluto___509;
 #X obj 970 1015 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9192 1;
+-1 -1 7229 1;
 #X obj 915 1027 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #N canvas 0 25 450 300 sample 0;
@@ -477,7 +477,7 @@
 #X obj 1521 1027 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 12700 1;
 #X obj 1448 1036 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 254 1;
 #N canvas 0 25 450 300 sample 0;
 #X obj 188 75 inlet~;
 #X obj 320 77 loadbang;
@@ -607,50 +607,6 @@ it is maxed out;
 userX=51 \, userY=0);
 #X obj 1459 721 dac~;
 #X obj 1452 685 *~;
-#N canvas 0 25 1440 847 calcAsteroidVolume 0;
-#X obj 262 335 -;
-#X obj 262 365 abs;
-#X obj 261 462 -;
-#X obj 262 399 t b f;
-#X obj 262 509 clip 0 1;
-#X obj 280 290 loadbang;
-#X text 307 429 distance you can hear;
-#X obj 259 191 expr sqrt(pow($f1 \, 2) + pow($f2 \, 2));
-#X obj 416 145 abs;
-#X obj 260 137 abs;
-#X obj 260 114 r userY;
-#X obj 416 121 r userX;
-#X obj 416 169 t b f;
-#X obj 260 161 f;
-#X obj 261 545 outlet;
-#X floatatom 183 215 5 0 0 0 - - -;
-#X text 274 213 dist from sun;
-#X text 318 313 center of asteroidbelt;
-#X msg 280 313 600;
-#X msg 261 430 100;
-#X text 336 486 divide by 95 instead of 100 to increase range where
-it is maxed out;
-#X obj 262 485 / 75;
-#X connect 0 0 1 0;
-#X connect 1 0 3 0;
-#X connect 2 0 21 0;
-#X connect 3 0 19 0;
-#X connect 3 1 2 1;
-#X connect 4 0 14 0;
-#X connect 5 0 18 0;
-#X connect 7 0 0 0;
-#X connect 7 0 15 0;
-#X connect 8 0 12 0;
-#X connect 9 0 13 0;
-#X connect 10 0 9 0;
-#X connect 11 0 8 0;
-#X connect 12 0 13 0;
-#X connect 12 1 7 1;
-#X connect 13 0 7 0;
-#X connect 18 0 0 1;
-#X connect 19 0 2 0;
-#X connect 21 0 4 0;
-#X restore 1530 626 pd calcAsteroidVolume;
 #N canvas 0 25 1356 657 indB 0;
 #X obj 335 410 line~;
 #X obj 335 356 dbtorms;
@@ -703,11 +659,11 @@ userX=550 \, userY=0);
 #X obj 1147 349 s TrojansOnOff;
 #X obj 1402 57 r jAngle;
 #X obj 1405 116 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2008 1;
+-1 -1 2070 1;
 #X obj 1676 112 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4642 1;
+-1 -1 4703 1;
 #X obj 1405 40 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3325 1;
+-1 -1 3386 1;
 #N canvas 0 25 1440 511 trojanAngles 0;
 #X obj 418 113 + 0.166667;
 #X obj 267 124 - 0.166667;
@@ -751,7 +707,7 @@ userX=550 \, userY=0);
 #X restore 1402 85 pd trojanAngles;
 #X obj 1416 357 pan;
 #X obj 1474 249 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6287 1;
+-1 -1 6317 1;
 #X obj 1416 387 dac~;
 #X obj 1353 331 *~;
 #X obj 1402 196 calcVolPan;
@@ -790,7 +746,7 @@ userX=550 \, userY=0);
 #X obj 1623 167 Trojans;
 #X obj 1687 355 pan;
 #X obj 1745 247 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 811 1;
+-1 -1 5932 1;
 #X obj 1687 385 dac~;
 #X obj 1624 329 *~;
 #X obj 1673 194 calcVolPan;
@@ -827,7 +783,51 @@ userX=550 \, userY=0);
 #X restore 1673 218 pd sample;
 #X msg 1706 165 79;
 #X msg 1489 167 50;
-#X msg 1759 165 50;
+#X msg 1758 163 50;
+#N canvas 0 25 1440 847 calcKuiperVolume 1;
+#X obj 262 335 -;
+#X obj 262 365 abs;
+#X obj 261 462 -;
+#X obj 262 399 t b f;
+#X obj 262 509 clip 0 1;
+#X obj 280 290 loadbang;
+#X text 307 429 distance you can hear;
+#X obj 259 191 expr sqrt(pow($f1 \, 2) + pow($f2 \, 2));
+#X obj 416 145 abs;
+#X obj 260 137 abs;
+#X obj 260 114 r userY;
+#X obj 416 121 r userX;
+#X obj 416 169 t b f;
+#X obj 260 161 f;
+#X obj 261 545 outlet;
+#X floatatom 183 215 5 0 0 0 - - -;
+#X text 274 213 dist from sun;
+#X text 318 313 center of asteroidbelt;
+#X text 336 486 divide by 95 instead of 100 to increase range where
+it is maxed out;
+#X obj 262 485 / 75;
+#X msg 261 430 100;
+#X msg 281 313 620;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 19 0;
+#X connect 3 0 20 0;
+#X connect 3 1 2 1;
+#X connect 4 0 14 0;
+#X connect 5 0 21 0;
+#X connect 7 0 0 0;
+#X connect 7 0 15 0;
+#X connect 8 0 12 0;
+#X connect 9 0 13 0;
+#X connect 10 0 9 0;
+#X connect 11 0 8 0;
+#X connect 12 0 13 0;
+#X connect 12 1 7 1;
+#X connect 13 0 7 0;
+#X connect 19 0 4 0;
+#X connect 20 0 2 0;
+#X connect 21 0 0 1;
+#X restore 1530 625 pd calcKuiperVolume;
 #X connect 1 0 188 0;
 #X connect 2 0 11 0;
 #X connect 2 1 11 1;
@@ -1042,55 +1042,55 @@ userX=550 \, userY=0);
 #X connect 232 0 43 0;
 #X connect 235 0 183 0;
 #X connect 236 0 237 0;
-#X connect 236 0 261 0;
+#X connect 236 0 260 0;
 #X connect 237 0 235 1;
 #X connect 237 0 248 1;
 #X connect 239 0 76 0;
 #X connect 240 0 18 1;
 #X connect 248 0 183 1;
 #X connect 251 0 250 0;
-#X connect 252 0 253 0;
-#X connect 252 0 259 0;
-#X connect 253 0 251 1;
-#X connect 253 0 254 1;
-#X connect 254 0 250 1;
-#X connect 255 0 257 0;
-#X connect 256 0 255 0;
-#X connect 258 0 251 0;
-#X connect 258 1 254 0;
-#X connect 262 0 274 0;
-#X connect 263 0 265 0;
-#X connect 264 0 263 0;
-#X connect 266 0 269 0;
-#X connect 266 0 270 0;
-#X connect 267 0 275 0;
-#X connect 268 0 286 0;
-#X connect 270 0 267 0;
-#X connect 270 1 268 0;
-#X connect 271 0 273 0;
-#X connect 271 1 273 1;
-#X connect 274 0 271 0;
-#X connect 275 0 274 1;
-#X connect 275 0 279 0;
-#X connect 275 1 271 1;
-#X connect 275 1 278 0;
-#X connect 277 0 280 0;
-#X connect 277 0 292 0;
-#X connect 278 0 272 0;
-#X connect 279 0 276 0;
-#X connect 280 0 275 1;
-#X connect 281 0 285 0;
-#X connect 282 0 284 0;
-#X connect 282 1 284 1;
-#X connect 285 0 282 0;
-#X connect 286 0 285 1;
-#X connect 286 0 290 0;
-#X connect 286 1 282 1;
-#X connect 286 1 289 0;
-#X connect 288 0 291 0;
-#X connect 288 0 293 0;
-#X connect 289 0 283 0;
-#X connect 290 0 287 0;
-#X connect 291 0 286 1;
-#X connect 292 0 275 2;
-#X connect 293 0 286 2;
+#X connect 252 0 251 1;
+#X connect 252 0 253 1;
+#X connect 253 0 250 1;
+#X connect 254 0 256 0;
+#X connect 255 0 254 0;
+#X connect 257 0 251 0;
+#X connect 257 1 253 0;
+#X connect 261 0 273 0;
+#X connect 262 0 264 0;
+#X connect 263 0 262 0;
+#X connect 265 0 268 0;
+#X connect 265 0 269 0;
+#X connect 266 0 274 0;
+#X connect 267 0 285 0;
+#X connect 269 0 266 0;
+#X connect 269 1 267 0;
+#X connect 270 0 272 0;
+#X connect 270 1 272 1;
+#X connect 273 0 270 0;
+#X connect 274 0 273 1;
+#X connect 274 0 278 0;
+#X connect 274 1 270 1;
+#X connect 274 1 277 0;
+#X connect 276 0 279 0;
+#X connect 276 0 291 0;
+#X connect 277 0 271 0;
+#X connect 278 0 275 0;
+#X connect 279 0 274 1;
+#X connect 280 0 284 0;
+#X connect 281 0 283 0;
+#X connect 281 1 283 1;
+#X connect 284 0 281 0;
+#X connect 285 0 284 1;
+#X connect 285 0 289 0;
+#X connect 285 1 281 1;
+#X connect 285 1 288 0;
+#X connect 287 0 290 0;
+#X connect 287 0 292 0;
+#X connect 288 0 282 0;
+#X connect 289 0 286 0;
+#X connect 290 0 285 1;
+#X connect 291 0 274 2;
+#X connect 292 0 285 2;
+#X connect 293 0 252 0;
+#X connect 293 0 258 0;
