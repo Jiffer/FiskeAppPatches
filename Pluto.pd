@@ -1,5 +1,66 @@
 #N canvas -9 -9 1920 976 12;
 #X obj 679 579 *~;
+#X obj 1202 527 rampOnOff;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array visual_representation 100 float 3;
+#A 0 -0.00166935 -0.00576271 -0.0093761 -0.010991 -0.010862 -0.00857945
+-0.00483733 -0.00039877 0.00314706 0.00507015 0.00562901 0.00486695
+0.00331734 0.00188185 0.001505 0.00259727 0.00425878 0.0058327 0.00669548
+0.00621 0.0038582 9.15284e-005 -0.00387615 -0.00716964 -0.00897737
+-0.00922431 -0.00782716 -0.00557987 -0.00344213 -0.0018415 -0.00196503
+-0.0034012 -0.00537183 -0.00682805 -0.0075061 -0.00706939 -0.00544227
+-0.0025507 0.0012229 0.00485404 0.00710366 0.00793353 0.00755975 0.00683142
+0.00615368 0.00571699 0.00549679 0.00534374 0.00516022 0.00450216 0.00271815
+-0.000105634 -0.00343355 -0.00653277 -0.00868307 -0.00948686 -0.00899629
+-0.00712205 -0.0045638 -0.00237318 -0.000665239 0.000342626 0.000202813
+-0.000421942 -0.00124436 -0.00170261 -0.000924312 0.000716677 0.00294604
+0.00545887 0.00791938 0.0097535 0.0103818 0.00955796 0.00695312 0.00332566
+2.53481e-006 -0.00275535 -0.00417693 -0.00467065 -0.00504054 -0.0055304
+-0.00620004 -0.00691632 -0.0082295 -0.00916938 -0.00946818 -0.00853574
+-0.00651176 -0.00325204 0.00055423 0.00398025 0.00607502 0.00686228
+0.00633658 0.00472436 0.00259406 0.00115561 0.000457933 0.000794585
+;
+#X coords 0 1 100 -1 200 140 1 0 0;
+#X restore 1286 119 graph;
+#X obj 1392 602 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1392 622 metro 100;
+#X text 1397 717 Line out to soundcard;
+#X obj 1392 674 tabwrite~ visual_representation;
+#X obj 80 39 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 80 59 \; pd dsp \$1;
+#X obj 666 711 outlet~;
+#X text 43 639 Lists of frequencies to be added to the Center Frequency
+fields. Each list creates a specific sound spectrum \, but;
+#X text 42 671 they all share the same internal proportions \, derived
+from;
+#X text 41 687 those of the planetary masses of the solar system.;
+#X text 494 836 Jupiter 90 \, Saturn 152 \, Neptune 241 \, Uranus 250
+\, Earth 388 \, Venus 399 \, Mars 504 \, Mercury 538 \, Pluto 700;
+#X text 45 722 Jupiter: 90 \, 752 \, 893 \, 1323 \, 1367 \, 1935 \,
+1969 \, 2334 \, 2590;
+#X text 44 736 Saturn: 152 \, 917 \, 1081 \, 1578 \, 1628 \, 2285 \,
+2324 \, 2756 \, 3042;
+#X text 45 751 Neptune: 241 \, 1153 \, 1348 \, 1940 \, 2000 \, 2783
+\, 2830 \, 3332 \, 3685;
+#X text 45 766 Uranus: 250 \, 1175 \, 1373 \, 1974 \, 2035 \, 2829
+\, 2877 \, 3387 \, 3745;
+#X text 45 781 Earth: 388 \, 1542 \, 1789 \, 2539 \, 2614 \, 3606 \,
+3665 \, 4301 \, 4748;
+#X text 44 796 Venus: 399 \, 1571 \, 1821 \, 2582 \, 2659 \, 3664 \,
+3725 \, 4371 \, 4824;
+#X text 45 809 Mars: 504 \, 1849 \, 2136 \, 3010 \, 3098 \, 4252 \,
+4322 \, 5063 \, 5583;
+#X text 44 823 Mercury: 538 \, 1940 \, 2239 \, 3150 \, 3241 \, 4445
+\, 4518 \, 5290 \, 5832;
+#X text 44 841 Pluto: 700 \, 2368 \, 2724 \, 3804 \, 3917 \, 5349 \,
+5436 \, 6354 \, 7000;
+#X text 52 557 Basses: 40 \, 45 \, 46 \, 76 \, 77 \, 120.5 \, 121.5
+\, 125 \, 126 \, 194 \, 195 \, 199.5 \, 200.5 \, 252 \, 253 \, 269
+\, 270 \, 350 \, 351;
+#X obj 1202 494 r PlutoOnOff;
+#N canvas -9 -9 1920 976 sineTonesPluto 0;
 #X floatatom 234 277 5 0 0 0 - - -;
 #N canvas 0 50 450 355 triangle 0;
 #X obj 143 24 inlet;
@@ -60,7 +121,6 @@
 #X connect 12 0 6 1;
 #X connect 12 0 2 1;
 #X restore 143 305 pd triangle;
-#X obj 1202 527 rampOnOff;
 #X text 132 180 New low frequencies;
 #X obj 326 304 cos~;
 #X obj 422 304 cos~;
@@ -80,66 +140,7 @@
 #X obj 928 337 *~ 0.08;
 #X obj 234 337 *~ 0.6;
 #X obj 143 337 *~ 0.6;
-#N canvas 0 50 450 250 (subpatch) 0;
-#X array visual_representation 100 float 3;
-#A 0 -0.00166935 -0.00576271 -0.0093761 -0.010991 -0.010862 -0.00857945
--0.00483733 -0.00039877 0.00314706 0.00507015 0.00562901 0.00486695
-0.00331734 0.00188185 0.001505 0.00259727 0.00425878 0.0058327 0.00669548
-0.00621 0.0038582 9.15284e-005 -0.00387615 -0.00716964 -0.00897737
--0.00922431 -0.00782716 -0.00557987 -0.00344213 -0.0018415 -0.00196503
--0.0034012 -0.00537183 -0.00682805 -0.0075061 -0.00706939 -0.00544227
--0.0025507 0.0012229 0.00485404 0.00710366 0.00793353 0.00755975 0.00683142
-0.00615368 0.00571699 0.00549679 0.00534374 0.00516022 0.00450216 0.00271815
--0.000105634 -0.00343355 -0.00653277 -0.00868307 -0.00948686 -0.00899629
--0.00712205 -0.0045638 -0.00237318 -0.000665239 0.000342626 0.000202813
--0.000421942 -0.00124436 -0.00170261 -0.000924312 0.000716677 0.00294604
-0.00545887 0.00791938 0.0097535 0.0103818 0.00955796 0.00695312 0.00332566
-2.53481e-006 -0.00275535 -0.00417693 -0.00467065 -0.00504054 -0.0055304
--0.00620004 -0.00691632 -0.0082295 -0.00916938 -0.00946818 -0.00853574
--0.00651176 -0.00325204 0.00055423 0.00398025 0.00607502 0.00686228
-0.00633658 0.00472436 0.00259406 0.00115561 0.000457933 0.000794585
-;
-#X coords 0 1 100 -1 200 140 1 0 0;
-#X restore 1286 119 graph;
-#X obj 1392 602 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X obj 1392 622 metro 100;
-#X text 1397 717 Line out to soundcard;
-#X obj 1392 674 tabwrite~ visual_representation;
-#X obj 80 39 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X msg 80 59 \; pd dsp \$1;
-#X obj 666 711 outlet~;
 #X obj 143 218 loadbang;
-#X text 43 639 Lists of frequencies to be added to the Center Frequency
-fields. Each list creates a specific sound spectrum \, but;
-#X text 42 671 they all share the same internal proportions \, derived
-from;
-#X text 41 687 those of the planetary masses of the solar system.;
-#X text 494 836 Jupiter 90 \, Saturn 152 \, Neptune 241 \, Uranus 250
-\, Earth 388 \, Venus 399 \, Mars 504 \, Mercury 538 \, Pluto 700;
-#X text 45 722 Jupiter: 90 \, 752 \, 893 \, 1323 \, 1367 \, 1935 \,
-1969 \, 2334 \, 2590;
-#X text 44 736 Saturn: 152 \, 917 \, 1081 \, 1578 \, 1628 \, 2285 \,
-2324 \, 2756 \, 3042;
-#X text 45 751 Neptune: 241 \, 1153 \, 1348 \, 1940 \, 2000 \, 2783
-\, 2830 \, 3332 \, 3685;
-#X text 45 766 Uranus: 250 \, 1175 \, 1373 \, 1974 \, 2035 \, 2829
-\, 2877 \, 3387 \, 3745;
-#X text 45 781 Earth: 388 \, 1542 \, 1789 \, 2539 \, 2614 \, 3606 \,
-3665 \, 4301 \, 4748;
-#X text 44 796 Venus: 399 \, 1571 \, 1821 \, 2582 \, 2659 \, 3664 \,
-3725 \, 4371 \, 4824;
-#X text 45 809 Mars: 504 \, 1849 \, 2136 \, 3010 \, 3098 \, 4252 \,
-4322 \, 5063 \, 5583;
-#X text 44 823 Mercury: 538 \, 1940 \, 2239 \, 3150 \, 3241 \, 4445
-\, 4518 \, 5290 \, 5832;
-#X text 44 841 Pluto: 700 \, 2368 \, 2724 \, 3804 \, 3917 \, 5349 \,
-5436 \, 6354 \, 7000;
-#X text 52 557 Basses: 40 \, 45 \, 46 \, 76 \, 77 \, 120.5 \, 121.5
-\, 125 \, 126 \, 194 \, 195 \, 199.5 \, 200.5 \, 252 \, 253 \, 269
-\, 270 \, 350 \, 351;
-#X obj 1202 494 r PlutoOnOff;
 #X obj 1135 305 cos~;
 #X obj 1136 337 *~ 0.05;
 #X msg 143 248 350;
@@ -153,47 +154,248 @@ from;
 #X obj 823 263 phasor~ 5349;
 #X obj 927 262 phasor~ 5436;
 #X obj 1032 262 phasor~ 6354;
-#X connect 0 0 29 0;
-#X connect 0 0 32 0;
-#X connect 1 0 2 0;
-#X connect 2 0 23 0;
+#X obj 681 579 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 21 0;
+#X connect 2 0 3 0;
+#X connect 3 0 22 0;
+#X connect 5 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 37 0;
+#X connect 8 0 37 0;
+#X connect 9 0 11 0;
+#X connect 10 0 12 0;
+#X connect 11 0 37 0;
+#X connect 12 0 37 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 37 0;
+#X connect 16 0 37 0;
+#X connect 17 0 20 0;
+#X connect 18 0 19 0;
+#X connect 19 0 37 0;
+#X connect 20 0 37 0;
+#X connect 21 0 37 0;
+#X connect 22 0 37 0;
+#X connect 23 0 26 0;
+#X connect 23 0 27 0;
+#X connect 24 0 25 0;
+#X connect 25 0 37 0;
+#X connect 26 0 2 0;
+#X connect 27 0 0 0;
+#X connect 28 0 5 0;
+#X connect 29 0 24 0;
+#X connect 30 0 6 0;
+#X connect 31 0 9 0;
+#X connect 32 0 10 0;
+#X connect 33 0 13 0;
+#X connect 34 0 14 0;
+#X connect 35 0 17 0;
+#X connect 36 0 18 0;
+#X restore 446 154 pd sineTonesPluto;
+#X obj 493 291 line~;
+#X obj 445 365 *~;
+#X msg 493 232 1 100;
+#X msg 553 232 0 100;
+#X obj 757 21 r waveformSelect, f 31;
+#X obj 910 290 line~;
+#X obj 723 375 *~;
+#X msg 910 231 1 100;
+#X msg 970 231 0 100;
+#X obj 757 47 select 0 1, f 31;
+#N canvas 2 539 1874 394 noisePluto 0;
+#X obj 177 153 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12675 1;
+#X obj 356 173 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 11481 1;
+#X obj 532 170 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8204 1;
+#X obj 680 160 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 9728 1;
+#X obj 850 144 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5029 1;
+#X obj 1031 152 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X obj 1218 160 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1270 1;
+#X obj 1402 166 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4166 1;
+#X text 90 235 Center;
+#X text 90 249 Frequency;
+#X text 92 263 No. 1;
+#X text 272 217 Center;
+#X text 271 231 Frequency;
+#X text 274 245 No. 2;
+#X text 439 224 Center;
+#X text 439 238 Frequency;
+#X text 441 252 No. 3;
+#X text 590 222 Center;
+#X text 590 236 Frequency;
+#X text 592 250 No. 4;
+#X text 774 195 Center;
+#X text 777 209 Frequency;
+#X text 776 223 No. 5;
+#X text 955 198 Center;
+#X text 955 212 Frequency;
+#X text 957 225 No. 6;
+#X text 1148 200 Center;
+#X text 1148 214 Frequency;
+#X text 1150 228 No. 7;
+#X text 1331 196 Center;
+#X text 1331 210 Frequency;
+#X text 1335 224 No. 8;
+#X text 203 159 Filter;
+#X text 203 172 Bandwidth;
+#X text 204 187 Slider (*);
+#X obj 103 316 r~ n;
+#X obj 281 317 r~ n;
+#X obj 457 317 r~ n;
+#X obj 607 314 r~ n;
+#X obj 775 306 r~ n;
+#X obj 956 309 r~ n;
+#X obj 1143 310 r~ n;
+#X obj 1327 309 r~ n;
+#X obj 419 6 loadbang;
+#X obj 344 74 s E;
+#X obj 177 97 r E;
+#X obj 356 117 r E;
+#X obj 532 114 r E;
+#X obj 680 103 r E;
+#X obj 850 88 r E;
+#X obj 1031 98 r E;
+#X obj 1218 104 r E;
+#X obj 1402 110 r E;
+#X obj 140 288 r E;
+#X obj 319 290 r E;
+#X obj 495 286 r E;
+#X obj 643 286 r E;
+#X obj 813 280 r E;
+#X obj 994 281 r E;
+#X obj 1181 282 r E;
+#X obj 1365 277 r E;
+#X obj 419 32 s L;
+#X obj 344 46 r L;
+#X obj 1555 164 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3404 1;
+#X text 1477 194 Center;
+#X text 1477 208 Frequency;
+#X obj 1480 307 r~ n;
+#X obj 1555 108 r E;
+#X obj 1518 275 r E;
+#X text 1481 222 No. 9;
+#X obj 670 576 outlet~;
+#X obj 103 441 bp~, f 11;
+#X obj 282 441 bp~, f 11;
+#X obj 458 441 bp~, f 11;
+#X obj 606 441 bp~, f 11;
+#X obj 776 440 bp~, f 11;
+#X obj 957 440 bp~, f 11;
+#X obj 1144 440 bp~, f 11;
+#X obj 1328 440 bp~, f 11;
+#X obj 1481 440 bp~, f 11;
+#X msg 140 315 700;
+#X msg 319 317 2368;
+#X msg 495 316 2724;
+#X msg 643 312 3804;
+#X msg 813 306 3917;
+#X msg 994 309 5349;
+#X msg 1181 310 5436;
+#X msg 1365 308 6354;
+#X msg 1518 306 7000;
+#X msg 177 125 383;
+#X msg 356 145 198;
+#X msg 532 140 500;
+#X msg 680 132 50;
+#X msg 850 115 164;
+#X msg 1031 124 134;
+#X msg 1218 132 499;
+#X msg 1402 136 452;
+#X msg 1555 134 323;
+#X connect 0 0 71 2;
+#X connect 1 0 72 2;
+#X connect 2 0 73 2;
+#X connect 3 0 74 2;
+#X connect 4 0 75 2;
+#X connect 5 0 76 2;
+#X connect 6 0 77 2;
+#X connect 7 0 78 2;
+#X connect 35 0 71 0;
+#X connect 36 0 72 0;
+#X connect 37 0 73 0;
+#X connect 38 0 74 0;
+#X connect 39 0 75 0;
+#X connect 40 0 76 0;
+#X connect 41 0 77 0;
+#X connect 42 0 78 0;
+#X connect 43 0 61 0;
+#X connect 45 0 89 0;
+#X connect 46 0 90 0;
+#X connect 47 0 91 0;
+#X connect 48 0 92 0;
+#X connect 49 0 93 0;
+#X connect 50 0 94 0;
+#X connect 51 0 95 0;
+#X connect 52 0 96 0;
+#X connect 53 0 80 0;
+#X connect 54 0 81 0;
+#X connect 55 0 82 0;
+#X connect 56 0 83 0;
+#X connect 57 0 84 0;
+#X connect 58 0 85 0;
+#X connect 59 0 86 0;
+#X connect 60 0 87 0;
+#X connect 62 0 44 0;
+#X connect 63 0 79 2;
+#X connect 66 0 79 0;
+#X connect 67 0 97 0;
+#X connect 68 0 88 0;
+#X connect 71 0 70 0;
+#X connect 72 0 70 0;
+#X connect 73 0 70 0;
+#X connect 74 0 70 0;
+#X connect 75 0 70 0;
+#X connect 76 0 70 0;
+#X connect 77 0 70 0;
+#X connect 78 0 70 0;
+#X connect 79 0 70 0;
+#X connect 80 0 71 1;
+#X connect 81 0 72 1;
+#X connect 82 0 73 1;
+#X connect 83 0 74 1;
+#X connect 84 0 75 1;
+#X connect 85 0 76 1;
+#X connect 86 0 77 1;
+#X connect 87 0 78 1;
+#X connect 88 0 79 1;
+#X connect 89 0 0 0;
+#X connect 90 0 1 0;
+#X connect 91 0 2 0;
+#X connect 92 0 3 0;
+#X connect 93 0 4 0;
+#X connect 94 0 5 0;
+#X connect 95 0 6 0;
+#X connect 96 0 7 0;
+#X connect 97 0 63 0;
+#X restore 724 157 pd noisePluto;
+#X connect 0 0 6 0;
+#X connect 0 0 9 0;
+#X connect 1 0 0 1;
 #X connect 3 0 4 0;
-#X connect 4 0 24 0;
-#X connect 5 0 0 1;
-#X connect 7 0 9 0;
-#X connect 8 0 10 0;
-#X connect 9 0 0 0;
-#X connect 10 0 0 0;
-#X connect 11 0 13 0;
-#X connect 12 0 14 0;
-#X connect 13 0 0 0;
-#X connect 14 0 0 0;
-#X connect 15 0 17 0;
-#X connect 16 0 18 0;
-#X connect 17 0 0 0;
-#X connect 18 0 0 0;
-#X connect 19 0 22 0;
-#X connect 20 0 21 0;
-#X connect 21 0 0 0;
-#X connect 22 0 0 0;
-#X connect 23 0 0 0;
-#X connect 24 0 0 0;
-#X connect 26 0 27 0;
-#X connect 27 0 29 0;
-#X connect 30 0 31 0;
-#X connect 33 0 51 0;
-#X connect 33 0 52 0;
-#X connect 48 0 5 0;
-#X connect 49 0 50 0;
-#X connect 50 0 0 0;
-#X connect 51 0 3 0;
-#X connect 52 0 1 0;
-#X connect 53 0 7 0;
-#X connect 54 0 49 0;
-#X connect 55 0 8 0;
-#X connect 56 0 11 0;
-#X connect 57 0 12 0;
-#X connect 58 0 15 0;
-#X connect 59 0 16 0;
-#X connect 60 0 19 0;
-#X connect 61 0 20 0;
+#X connect 4 0 6 0;
+#X connect 7 0 8 0;
+#X connect 24 0 1 0;
+#X connect 25 0 27 0;
+#X connect 26 0 27 1;
+#X connect 27 0 0 0;
+#X connect 28 0 26 0;
+#X connect 29 0 26 0;
+#X connect 30 0 35 0;
+#X connect 31 0 32 1;
+#X connect 32 0 0 0;
+#X connect 33 0 31 0;
+#X connect 34 0 31 0;
+#X connect 35 0 28 0;
+#X connect 35 0 34 0;
+#X connect 35 1 29 0;
+#X connect 35 1 33 0;
+#X connect 36 0 32 0;
